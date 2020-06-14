@@ -5,6 +5,9 @@
 # obj.addContentToFile(filePath,content) // addContent to file 
 # content = obj.readContentFromFile(filePath) // read content from specified "filePath"
 
+# Represent each "node"(file/folder) object in the filesystem.
+# "children" here is represented as a map instead of list to perform faster
+# look-up, this is similar to a "trie" datastructure..
 class Node:
     def __init__(self, name, isFile=False, content=None):
         self.name = name
